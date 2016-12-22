@@ -72,3 +72,29 @@ img {
  max-width: 100%;
  height: auto;
 }
+
+
+.carousel-inner img {
+	width: 100%;
+}
+
+.tabpanel {
+	padding: 50px 20px;
+}
+
+body .container #hover-btn {
+	display: block;
+	margin: 50px auto;
+	padding: 10px 100px;
+	text-align: center;
+}
+
+#hover-btn.active {
+	background-color: #333;
+	color: #fff;
+}
+
+#hover-btn.active-red {
+	background-color: #f00;
+	color: #fff;
+}

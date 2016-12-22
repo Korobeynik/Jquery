@@ -1,11 +1,24 @@
 $(function() {
 
-	//SVG Fallback
-	if(!Modernizr.svg) {
-		$("img[src*='svg']").attr("src", function() {
-			return $(this).attr("src").replace(".svg", ".png");
-		});
-	};
+	$("#hover-btn").mouseover(function(event) {
+		$(this).addClass('active');
+	});
+
+	$("#hover-btn").mousedown(function(event) {
+		$(this).addClass('active-red');
+	});
+
+	$("#hover-btn").mouseout(function(event) {
+		$(this).removeClass('active');
+		$(this).removeClass('active-red');
+	});
+
+	$(".nav.navbar-nav").click(function (e) {
+		e.preventDefault();
+		alert("some");
+	});
+
+	
 
 	//E-mail Ajax Send
 	//Documentation & Example: https://github.com/agragregra/uniMail
