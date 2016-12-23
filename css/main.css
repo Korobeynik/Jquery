@@ -64,9 +64,9 @@ body {
 	display: none;
 }
 
-* {
+/** {
 	box-sizing: border-box;
-}
+}*/
 
 img {
  max-width: 100%;
@@ -97,4 +97,27 @@ body .container #hover-btn {
 #hover-btn.active-red {
 	background-color: #f00;
 	color: #fff;
+}
+
+#matrix {
+	width: 400px;
+	height: 400px;
+	display: block;
+	margin: 50px auto;
+	border-left: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	box-sizing: content-box;
+}
+
+#matrix div {
+	width: 19px;
+	height: 19px;
+	float: left;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	box-sizing: content-box;
+}
+
+#matrix div.red {
+	background-color: #f00;
 }

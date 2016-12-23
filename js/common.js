@@ -1,5 +1,9 @@
 $(function() {
 
+	$('#carousel-id').carousel({
+		interval: false
+	})
+
 	$("#hover-btn").mouseover(function(event) {
 		$(this).addClass('active');
 	});
@@ -17,6 +21,47 @@ $(function() {
 		e.preventDefault();
 		alert("some");
 	});
+
+	// $(".item a").on('click.namespace', function (e) {
+	// 		e.preventDefault();
+	// 		console.log('Hello my friend!!!');
+	// });
+
+/* ===========  Динамически создаем блок  ========== */
+	var span = $('.item span');
+	var matrix = $('#matrix');
+	matrix.append("<div class='td'></div>");
+	var elem  = $('#matrix .td');
+	
+	function createTd(){
+		var i = elem;
+		for (var i=0; i<399; i++) { //greate element td
+			matrix.append("<div class='td'></div>");
+		}
+	}
+
+	createTd();
+
+	$(matrix).on('click', elem, function () {
+		$(elem).toggleClass('red');
+	});
+
+ 
+
+	$('.item a').on('click', function (e) {
+			e.preventDefault();
+			$('.item span').toggle('slow', function(){
+					console.log('The span is now hidden');
+			});		
+	});
+
+	// function matrix(argument) {
+	// 	var elemCount = elem * 5;
+
+	// 	matrix.append(elemCount);
+	// };
+
+	// matrix();
 
 	
 
